@@ -1,3 +1,5 @@
+@import '../css/queries'
+    
 * 
     margin: 0
     padding: 0
@@ -38,11 +40,11 @@ body
                 100% 
                     background: #ffffff
                     transform: rotate(380deg)
-                            
 
-        h1 
+        .logo 
+            margin-left: 15px
             padding: 16px 10px
-            margin-left: 10px
+            color: #1b1b1b
     
     .content
         display: none
@@ -53,10 +55,10 @@ body
         left: 50%
         transform: translate(-50%, -50%)
 
-    // .content-fade
-    //     display: block
-    //     opacity: 1
-    //     transition: 2s ease
+        h1 
+            color: #1b1b1b
+            padding: 5px
+            font-size: 2.5em
 
     .content-fade 
         display: block
@@ -72,10 +74,12 @@ body
 
     .container
         text-align: center
-        width: 85%
-        margin: 0 auto
+        max-width: 650px
+        min-width: 300px
 
         p 
+            color: #808080
+            margin-top: 10px
             margin-bottom: 30px
 
         a.btn 
@@ -85,6 +89,7 @@ body
             background: red
             color: #ffffff
             margin-top: 20px
+            border-radius: 3px
             
         a.btn:hover
             background: #ff5d5d
