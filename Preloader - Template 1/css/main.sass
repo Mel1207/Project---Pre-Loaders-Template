@@ -3,17 +3,22 @@
 * 
     margin: 0
     padding: 0
+    // overflow-x: hidden
 
 body 
     font-family: Helvetica, sans-serif
     position: relative
+    overflow-x: hidden
     margin: 0
     padding: 0
-    background: #ffffff
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #F3F8FA 100%)
     height: 100vh
     width: 100%
 
     .loading
+        // background: green
+        height: auto
+        width: auto
         display: flex
         position: absolute
         top: 50%
@@ -21,9 +26,10 @@ body
         transform: translate(-50%, -50%)
 
         .squareLoad 
-            background: red
-            height:70px
-            width: 70px
+            margin-top: 95px
+            background: #80fab3
+            height:40px
+            width: 40px
             animation: rotate
             animation-duration: 2s
             animation-iteration-count: infinite
@@ -34,17 +40,17 @@ body
                     transform: rotate(45deg)
 
                 50%
-                    background: red
+                    background: #80fab3
                     transform: rotate(90deg)
 
                 100% 
                     background: #ffffff
                     transform: rotate(380deg)
 
-        .logo 
-            margin-left: 15px
-            padding: 16px 10px
-            color: #1b1b1b
+        img 
+            max-height: 200px
+            max-width: 300px
+            margin-left: 10px
     
     .content
         display: none
@@ -86,11 +92,11 @@ body
             text-decoration: none
             font-size: 20px
             padding: 10px 20px
-            background: red
+            background: #80fab3
             color: #ffffff
             margin-top: 20px
             border-radius: 3px
             
         a.btn:hover
-            background: #ff5d5d
+            background: #49cc80
             transition: 0.5s ease
