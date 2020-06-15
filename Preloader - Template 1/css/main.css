@@ -26,22 +26,49 @@ body {
   font-family: Helvetica, sans-serif;
   position: relative;
   overflow-x: hidden;
+}
+
+.content {
+  position: relative;
+  height: 100vh !important;
+  width: 100% !important;
   margin: 0;
   padding: 0;
-  background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #F3F8FA 100%);
-  height: 100vh;
-  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  z-index: -1;
 }
-body .loading {
-  height: auto;
-  width: auto;
+
+.content-fade {
+  display: block;
+  animation-name: fade-in;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  position: relative;
+  height: 100% !important;
+  width: 100% !important;
+  background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #F3F8FA 100%);
+  z-index: 2;
+}
+.loading .loading-logo {
   display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-body .loading .squareLoad {
+.loading .loading-logo .squareLoad {
   margin-top: 95px;
   background: #80fab3;
   height: 40px;
@@ -64,50 +91,36 @@ body .loading .squareLoad {
     transform: rotate(380deg);
   }
 }
-body .loading img {
+.loading .loading-logo img {
   max-height: 200px;
   max-width: 300px;
   margin-left: 10px;
 }
-body .content {
-  display: none;
-  opacity: 0;
+
+.content-index {
   transition: opacity 1s;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-body .content h1 {
+.content-index h1 {
   color: #1b1b1b;
   padding: 5px;
   font-size: 2.5em;
 }
-body .content-fade {
-  display: block;
-  animation-name: fade-in;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-body .container {
+
+.container {
   text-align: center;
   max-width: 650px;
   min-width: 300px;
 }
-body .container p {
+.container p {
   color: #808080;
   margin-top: 10px;
   margin-bottom: 30px;
 }
-body .container a.btn {
+.container a.btn {
   text-decoration: none;
   font-size: 20px;
   padding: 10px 20px;
@@ -116,7 +129,7 @@ body .container a.btn {
   margin-top: 20px;
   border-radius: 3px;
 }
-body .container a.btn:hover {
+.container a.btn:hover {
   background: #49cc80;
   transition: 0.5s ease;
 }
